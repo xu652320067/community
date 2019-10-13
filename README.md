@@ -24,3 +24,8 @@ session相当于银行账户,cokie就相当于银行卡,只有拿到银行卡才
 ### 8springboot中添加mybatis,添加pom依赖
 在application.properties中添加数据库连接池<br>
 新建mapper.UserMapper,model.User<br>
+
+### 9登录成功后通过java代码往前端写入cokie
+使用response写cookie,将cookie写入token中,在返回
+首页的时候需要将cookie里面key为token的信息获取到(indexController)然后
+去数据库中查询看数据库中是否存在(userMapper),以此来验证是否登录成功
